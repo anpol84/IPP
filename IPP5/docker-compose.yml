@@ -1,0 +1,22 @@
+version: "3"
+services:
+  server:
+    build: backend/
+    ports:
+      - "8080:8080"
+    environment:
+       MONGODB_URI: mongodb://localhost:27017
+    depends_on:
+      - mongodb  
+
+   
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+volumes:
+    mongo_db: {}

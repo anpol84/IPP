@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>Weather</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    console.log(1);
+
+var settings = {
+  "url": "https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=11e676c34c5a946c81a3b2a86d3fb25b",
+  "method": "GET",
+  "timeout": 0,
+};
+
+$.ajax(settings).done(function (response, xhr) {
+  console.log('Return code: ' + xhr.status);
+  var content = response.main.temp;
+  var maxTemp = response.main.temp_max;
+  var minTemp = response.main.temp_min;
+  var pressure = response.main.pressure;
+  var speed = response.wind.speed;
+  var deg = response.wind.deg;
+  var gust = response.wind.gust;
+  $("#Temp").append(content);
+  $("#MaxTemp").append(maxTemp);
+  $("#MinTemp").append(minTemp);
+  $("#Pressure").append(pressure);
+  $("#Speed").append(speed);
+  $("#Deg").append(deg);
+  $("#Gust").append(gust)
+});
+</script>
+</head>
+<body>
+<h1>Weather</h1>
+temp: <span id="Temp"></span><br/>
+maxTemp: <span id="MaxTemp"></span><br/>
+minTemp: <span id="MinTemp"></span><br/>
+pressure: <span id ="Pressure"></span><br/>
+<h3>Wind:</h3>
+speed: <span id="Speed"></span><br/>
+deg: <span id ="Deg"></span><br/>
+gust: <span id = "Gust"></span>
+</body>
+</html>

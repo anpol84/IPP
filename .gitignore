@@ -1,0 +1,7 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/IPP5/backend/node_modules
+/IPP5/frontend/node_modules
+/IPP7/client/node_modules
+/IPP7/server/node_modules

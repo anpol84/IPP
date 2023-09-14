@@ -1,0 +1,62 @@
+{
+  "authors": [
+    {
+      "id": 0,
+      "name": "Александр Сергеевич Пушкин"
+    }
+  ],
+  "books": [
+    {
+      "id": 0,
+      "name": "Дубровский",
+      "year": "1888",
+      "author_id": 0,
+      "library_id": 1
+    },
+    {
+      "id": 1,
+      "name": "Герой нашего времени",
+      "year": "1888",
+      "author_id": 1,
+      "library_id": 0
+    },
+    {
+      "name": "Евгений Онегин2",
+      "year": "1828",
+      "author_id": 0,
+      "library_id": 1,
+      "id": 2
+    },
+    {
+      "name": "Евгений Онегинewqeqw",
+      "year": "1828",
+      "author_id": 0,
+      "library_id": 1,
+      "id": 3
+    },
+    {
+      "name": "Евгений Онегинewqeqwwqeqwqew",
+      "year": "1828",
+      "author_id": 0,
+      "library_id": 1,
+      "id": 4
+    }
+  ],
+  "libraries": [
+    {
+      "id": 0,
+      "address": "Kaluga",
+      "head": "Some name"
+    },
+    {
+      "id": 1,
+      "address": "Moscow",
+      "head": "Some name2"
+    },
+    {
+      "id": 2,
+      "address": "Moscow",
+      "head": "Some name3"
+    }
+  ]
+}

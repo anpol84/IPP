@@ -1,0 +1,54 @@
+<div class="container mt-4">
+    <div class = "card">
+        <h1>New Contact</h1>
+
+
+        <form (ngSubmit)="save()">
+            <div class="form-group">
+            <label>Username</label>
+            <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"  class="form-control" id="username" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+            <label >email</label>
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"  class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label>Mobile phone</label>
+                <input type="text" [(ngModel)]="telephone.mobile"  [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" placeholder="Enter mobile phone">
+            </div>
+            <div class="form-group">
+                <label>Home phone</label>
+                <input type="text" [(ngModel)]="telephone.home" [ngModelOptions]="{standalone: true}"  class="form-control" id="home" placeholder="Enter home phone">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-4" >
+    <h1>Contact Table</h1>
+   <table class="table">
+     <thead>    
+     <tr>
+         <th scope="col">Username</th>
+         <th scope="col">Email</th>
+         <th scope="col">Mobile phone</th>  
+         <th scope="col">Home phone</th>
+         <th scope="col">Action</th>
+       </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor="let ContactItem of ContactArray">
+         <td>{{ContactItem.username}}</td>
+         <td>{{ContactItem.email }}</td>
+         <td>{{ContactItem.telephone.mobile }}</td>
+         <td>{{ContactItem.telephone.home }}</td>
+         <td>
+           <button type="button" class="btn btn-success" (click)="setUpdate(ContactItem)">Edit</button>
+           <button type="button" class="btn btn-danger" (click)="setDelete(ContactItem)">Delete</button>            
+         </td>
+       </tr>          
+     </tbody>
+   </table>
+   </div>
